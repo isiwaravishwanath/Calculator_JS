@@ -6,8 +6,15 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
-
+.cal{
+    width:max-content;
+    height: max-content;
+    padding: 20px;
+    background-color: rgb(23, 60, 69);
+    border-radius: 10px;
+}
 .cal input{
     width: 60px;
     height: 60px;
