@@ -1,67 +1,100 @@
+let value=0;
+let tempValue=0;
+
 function clickedEqual(){
     let val=document.getElementById("display").innerText;
     console.log(val);
     let val1=parseInt(val);
     console.log(val1);
-
-}
-
-function clicked1(){
-    document.getElementById("display").innerText+="1";
-}
-
-function clicked2(){
-    document.getElementById("display").innerText+="2";
-}
-
-function clicked3(){
-    document.getElementById("display").innerText+="3";
-}
-
-function clicked4(){
-    document.getElementById("display").innerText+="4";
-}
-
-function clicked5(){
-    document.getElementById("display").innerText+="5";
-}
-
-function clicked6(){
-    document.getElementById("display").innerText+="6";
-}
-
-function clicked7(){
-    document.getElementById("display").innerText+="7";
-}
-
-function clicked8(){
-    document.getElementById("display").innerText+="8";
-}
-
-function clicked9(){
-    document.getElementById("display").innerText+="9";
-}
-
-function clicked0(){
-    document.getElementById("display").innerText+="0";
+    
 }
 
 function clickedPlus(){
-    document.getElementById("display").innerText+="+";
+    document.getElementById("display1").innerText+="+";
+    tempValue=parseInt(document.getElementById("display2").innerText);
+    value+=tempValue;
+    document.getElementById("display2").innerText="";
+    document.getElementById("display2").innerText=value;
+    console.log(value);
 }
 
 function clickedMin(){
-    document.getElementById("display").innerText+="-";
+    document.getElementById("display1").innerText+="-";
+    tempValue=parseInt(document.getElementById("display2").innerText);
+    document.getElementById("display2").innerText="";
+    value=tempValue-value;
+    console.log(value);
 }
 
 function clickedStar(){
-    document.getElementById("display").innerText+="*";
+    document.getElementById("display1").innerText+="*";
+    tempValue=parseInt(document.getElementById("display2").innerText);
+    document.getElementById("display2").innerText="";
+    value*=tempValue;
+    console.log(value);
 }
 
 function clickedDiv(){
-    document.getElementById("display").innerText+="/";
+    document.getElementById("display1").innerText+="/";
+    tempValue=parseInt(document.getElementById("display2").innerText);
+    document.getElementById("display2").innerText="";
+    value/=tempValue;
+    console.log(value);
 }
 
 function clickedC(){
-    document.getElementById("display").innerText="";
+    document.getElementById("display1").innerText="";
+    document.getElementById("display2").innerText="";
+    value=0;
+    tempValue=0;
+}
+
+function clicked1(){
+    document.getElementById("display1").innerText+="1";
+    document.getElementById("display2").innerText+="1";
+}
+
+function clicked2(){
+    document.getElementById("display1").innerText+="2";
+    document.getElementById("display2").innerText+="2";
+}
+
+function clicked3(){
+    document.getElementById("display1").innerText+="3";
+    document.getElementById("display2").innerText+="3";
+}
+
+function clicked4(){
+    document.getElementById("display1").innerText+="4";
+    document.getElementById("display2").innerText+="4";
+}
+
+function clicked5(){
+    document.getElementById("display1").innerText+="5";
+    document.getElementById("display2").innerText+="5";
+}
+
+function clicked6(){
+    document.getElementById("display1").innerText+="6";
+    document.getElementById("display2").innerText+="6";
+}
+
+function clicked7(){
+    document.getElementById("display1").innerText+="7";
+    document.getElementById("display2").innerText+="7";
+}
+
+function clicked8(){
+    document.getElementById("display1").innerText+="8";
+    document.getElementById("display2").innerText+="8";
+}
+
+function clicked9(){
+    document.getElementById("display1").innerText+="9";
+    document.getElementById("display2").innerText+="9";
+}
+
+function clicked0(){
+    document.getElementById("display1").innerText+="0";
+    document.getElementById("display2").innerText+="0";
 }
