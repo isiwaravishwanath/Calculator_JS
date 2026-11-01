@@ -17,9 +17,9 @@ function clickedPlus() {
 }
 
 function clickedMin() {
-    document.getElementById("display1").innerText += "+";
+    document.getElementById("display1").innerText += "-";
     tempValue = parseInt(document.getElementById("display2").innerText);
-    value += tempValue;
+    value = -value-tempValue;
     document.getElementById("display2").innerText = "";
     console.log(value);
 }
