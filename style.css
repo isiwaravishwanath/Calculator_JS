@@ -1,4 +1,8 @@
-body{
+* {
+    font-weight: 700;
+}
+
+body {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -6,47 +10,47 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(35, 35, 35);
     user-select: none;
 }
-.cal{
-    width:max-content;
+
+.cal {
+    width: max-content;
     height: max-content;
-    padding: 20px;
-    background-color: rgb(43, 52, 75);
+    padding: 24px 20px 20px 20px;
+    background-color: rgb(149, 149, 149);
     border-radius: 10px;
 }
-.cal input{
+
+.cal input {
     width: 60px;
     height: 60px;
     margin-bottom: 4px;
     font-size: 30px;
-    background-color:rgb(8, 50, 166);
-    color: white;
+    background-color: rgb(88, 88, 88);
     border: none;
 }
 
-.cal input:hover{
-    background-color:rgb(5, 31, 104);
-    transition: 0.3s;
+.cal input:hover {
+    background-color: black;
+    transition: 0.2s;
+    color: rgb(88, 88, 88);
 }
 
-.display1{
+.display1 {
     width: 252px;
     height: 25px;
-    background-color:rgb(8, 50, 166);
+    background-color: rgb(88, 88, 88);
     font-size: 15px;
     align-items: center;
     justify-content: right;
     display: flex;
-    color: white;
-    /* margin: 0 0 1px 0; */
 }
 
-.display2{
+.display2 {
     width: 252px;
     height: 35px;
-    background-color: rgb(148, 8, 166);
+    background-color: rgb(88, 88, 88);
     margin-bottom: 4px;
-    font-size:30px;
+    font-size: 30px;
 }
