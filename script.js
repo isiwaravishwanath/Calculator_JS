@@ -8,14 +8,14 @@ function clickedPlus() {
     if (symbol === "+") {
         value += tempValue;
     } else if (symbol === "-") {
-        value -= tempValue;
+        value = value - tempValue;
     } else if (symbol === "*") {
         value += tempValue;
     } else if (symbol === "/") {
         value += tempValue;
     } else {
-        symbol = "+";
         value += tempValue;
+        symbol = "+";
     }
     document.getElementById("display1").innerText += "+";
     document.getElementById("display2").innerText = "";
@@ -26,20 +26,16 @@ function clickedMin() {
     tempValue = parseInt(document.getElementById("display2").innerText);
     console.log("tempValue: " + tempValue);
     if (symbol === "+") {
-        tempValue = parseInt(document.getElementById("display2").innerText);
         value += tempValue;
     } else if (symbol === "-") {
-        tempValue = parseInt(document.getElementById("display2").innerText);
-        value -= tempValue;
+        value = value - tempValue;
     } else if (symbol === "*") {
-        tempValue = parseInt(document.getElementById("display2").innerText);
         value += tempValue;
     } else if (symbol === "/") {
-        tempValue = parseInt(document.getElementById("display2").innerText);
         value += tempValue;
     } else {
+        value = value - tempValue;
         symbol = "-";
-        value -= tempValue;
     }
     document.getElementById("display1").innerText += "-";
     document.getElementById("display2").innerText = "";
@@ -91,7 +87,7 @@ function clicked(num) {
     if (document.getElementById("display1").innerText === "") {
         document.getElementById("display2").innerText === "45";
     }
-    
+
     document.getElementById("display1").innerText += num;
     document.getElementById("display2").innerText += num;
 }

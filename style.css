@@ -28,29 +28,41 @@ body {
     margin-bottom: 4px;
     font-size: 30px;
     background-color: rgb(88, 88, 88);
+    border-radius: 5px;
     border: none;
+    transition: 0.3s;
 }
 
 .cal input:hover {
     background-color: black;
-    transition: 0.2s;
     color: rgb(88, 88, 88);
 }
 
-.display1 {
+.cal input:active{
+    background-color: rgb(149, 149, 149);
+    color: black
+}
+
+.display{
+    overflow: hidden;
     width: 252px;
-    height: 25px;
     background-color: rgb(88, 88, 88);
-    font-size: 15px;
     align-items: center;
     justify-content: right;
     display: flex;
+    box-sizing: border-box;
+    padding: 0 5px 0 0;
+}
+
+.display1 {
+    height: 25px;
+    font-size: 15px;
+    border-radius: 5px 5px 0 0;
 }
 
 .display2 {
-    width: 252px;
     height: 35px;
-    background-color: rgb(88, 88, 88);
     margin-bottom: 4px;
     font-size: 30px;
+    border-radius: 0 0 5px 5px;
 }
