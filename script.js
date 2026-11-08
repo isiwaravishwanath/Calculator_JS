@@ -43,10 +43,23 @@ function clickedMin() {
 }
 
 function clickedStar() {
-    document.getElementById("display1").innerText += "*";
+    if(value==0) value=1;
     tempValue = parseInt(document.getElementById("display2").innerText);
+    console.log("tempValue: " + tempValue);
+    if (symbol === "+") {
+        value += tempValue;
+    } else if (symbol === "-") {
+        value = value - tempValue;
+    } else if (symbol === "*") {
+        value += tempValue;
+    } else if (symbol === "/") {
+        value += tempValue;
+    } else {
+        value *= tempValue;
+        symbol = "*";
+    }
+    document.getElementById("display1").innerText += "*";
     document.getElementById("display2").innerText = "";
-    value *= tempValue;
     console.log(value);
 }
 
