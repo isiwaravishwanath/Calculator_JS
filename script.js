@@ -12,7 +12,7 @@ function clickedPlus() {
     } else if (symbol === "*") {
         value += tempValue;
     } else if (symbol === "/") {
-        value += tempValue;
+        value /= tempValue;
     } else {
         value += tempValue;
         symbol = "+";
@@ -32,9 +32,9 @@ function clickedMin() {
     } else if (symbol === "*") {
         value += tempValue;
     } else if (symbol === "/") {
-        value += tempValue;
+        value /= tempValue;
     } else {
-        value = value - tempValue;
+        value = tempValue;
         symbol = "-";
     }
     document.getElementById("display1").innerText += "-";
@@ -53,7 +53,7 @@ function clickedStar() {
     } else if (symbol === "*") {
         value *= tempValue;
     } else if (symbol === "/") {
-        value = tempValue/value;
+        value /= tempValue;
     } else {
         value *= tempValue;
         symbol = "*";
@@ -74,9 +74,9 @@ function clickedDiv() {
     } else if (symbol === "*") {
         value *= tempValue;
     } else if (symbol === "/") {
-        value = tempValue/value;
+        value /= tempValue;
     } else {
-        value = tempValue / value;
+        value = tempValue/value;
         symbol = "/";
     }
     document.getElementById("display1").innerText += "/";
