@@ -43,7 +43,7 @@ function clickedMin() {
 }
 
 function clickedStar() {
-    if(value==0) value=1;
+    if (value == 0) value = 1;
     tempValue = parseInt(document.getElementById("display2").innerText);
     console.log("tempValue: " + tempValue);
     if (symbol === "+") {
@@ -51,9 +51,9 @@ function clickedStar() {
     } else if (symbol === "-") {
         value = value - tempValue;
     } else if (symbol === "*") {
-        value += tempValue;
+        value *= tempValue;
     } else if (symbol === "/") {
-        value += tempValue;
+        value = tempValue/value;
     } else {
         value *= tempValue;
         symbol = "*";
@@ -64,29 +64,41 @@ function clickedStar() {
 }
 
 function clickedDiv() {
-    document.getElementById("display1").innerText += "/";
+    if (value == 0) value = 1;
     tempValue = parseInt(document.getElementById("display2").innerText);
+    console.log("tempValue: " + tempValue);
+    if (symbol === "+") {
+        value += tempValue;
+    } else if (symbol === "-") {
+        value = value - tempValue;
+    } else if (symbol === "*") {
+        value *= tempValue;
+    } else if (symbol === "/") {
+        value = tempValue/value;
+    } else {
+        value = tempValue / value;
+        symbol = "/";
+    }
+    document.getElementById("display1").innerText += "/";
     document.getElementById("display2").innerText = "";
-    value /= tempValue;
     console.log(value);
 }
 
 function clickedEqual() {
+    tempValue = parseInt(document.getElementById("display2").innerText);
     if (symbol === "+") {
-        tempValue = parseInt(document.getElementById("display2").innerText);
         value += tempValue;
-        document.getElementById("display2").innerText = value;
-        document.getElementById("display1").innerText = "";
-        console.log(value);
-        value = 0;
     } else if (symbol === "-") {
-        tempValue = parseInt(document.getElementById("display2").innerText);
         value = value - tempValue;
-        document.getElementById("display2").innerText = value;
-        document.getElementById("display1").innerText = "";
-        console.log(value);
-        value = 0;
+    } else if (symbol === "*") {
+        value *= tempValue;
+    } else if (symbol === "/") {
+        value /= tempValue;
     }
+    document.getElementById("display2").innerText = value;
+    document.getElementById("display1").innerText = "";
+    console.log(value);
+    value = 0;
 }
 
 function clickedC() {
@@ -98,7 +110,7 @@ function clickedC() {
 
 function clicked(num) {
     if (document.getElementById("display1").innerText === "") {
-        document.getElementById("display2").innerText === "45";
+        document.getElementById("display2").innerText === "";
     }
 
     document.getElementById("display1").innerText += num;
